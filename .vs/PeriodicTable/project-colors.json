@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "7d68a31a-eca9-4bce-93b2-b89015789c2f": {
+      "ProjectGuid": "7d68a31a-eca9-4bce-93b2-b89015789c2f",
+      "DisplayName": "PeriodicTable",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
