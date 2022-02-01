@@ -36,21 +36,20 @@ namespace PeriodicTable
                     case "s":
                         while (proceed)
                         {
+                            Console.Clear();
+                            Console.Write("What do you want to search?  ");
                             var input = Console.ReadLine();
                             //Decides if the input is a short or full name, calls function
-                            if (input.Length <= 2) { var output = FetchElementByShort(input, a); Console.WriteLine($"{output.PN}, Short: {output.Short}; EN: {output.EnName}, CZ: {output.CzName}, LAT: {output.lName}"); }
-                            else { var output = FetchElementByName(input.ToLower(), a); Console.WriteLine($"{output.PN}; EN: {output.EnName}, CZ: {output.CzName}, LAT: {output.lName}"); }
+                            if (input.Length <= 2) { var output = FetchElementByShort(input, a); Console.WriteLine($" ~ {output.PN}, Short: {output.Short}; EN: {output.EnName}, CZ: {output.CzName}, LAT: {output.lName}"); }
+                            else { var output = FetchElementByName(input.ToLower(), a); Console.WriteLine($" ~ {output.PN}, Short:{output.Short}; EN: {output.EnName}, CZ: {output.CzName}, LAT: {output.lName}"); }
                             Console.Write("Type s to continue searching or e to exit to main menu... ");
                             switch (Console.ReadLine())
                             {
                                 case "s":
-                                    Console.Clear();
                                     continue;
                                 case "e":
-                                    Console.Clear();
                                     proceed = false;
                                     break;
-
                             }
                         }
                         break;
@@ -98,11 +97,11 @@ namespace PeriodicTable
             while (proceed)
             {
                 Console.Clear();
-                var num = list[rand.Next(1, list.Count-1)]; //selects a random element
+                var num = list[rand.Next(1, list.Count - 1)]; //selects a random element
                 switch (rand.Next(0, 2)) //randomly selects the question from the two options - element from short name or short name from latin name
                 {
                     case 0:
-                        Console.WriteLine($"Napiš cesky nazev podle zkratky {num.Short}");
+                        Console.WriteLine($"Napis cesky nazev podle zkratky {num.Short}");
                         var an = Console.ReadLine();
                         if (an.ToLower() == num.CzName) { score++; Console.WriteLine($"Correct! Current score is {score}."); }
                         else { score = 0; Console.WriteLine($"Bzzz! That's not correct! The correct answer is {num.CzName}"); }
