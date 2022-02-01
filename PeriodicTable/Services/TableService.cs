@@ -98,19 +98,19 @@ namespace PeriodicTable
             while (proceed)
             {
                 Console.Clear();
-                var num = list[rand.Next(rand.Next(1, list.Count - 1))]; //selects a random element
+                var num = list[rand.Next(1, list.Count-1)]; //selects a random element
                 switch (rand.Next(0, 2)) //randomly selects the question from the two options - element from short name or short name from latin name
                 {
                     case 0:
                         Console.WriteLine($"Napiš cesky nazev podle zkratky {num.Short}");
                         var an = Console.ReadLine();
-                        if (an == num.CzName) { score++; Console.WriteLine($"Correct! Current score is {score}."); }
+                        if (an.ToLower() == num.CzName) { score++; Console.WriteLine($"Correct! Current score is {score}."); }
                         else { score = 0; Console.WriteLine($"Bzzz! That's not correct! The correct answer is {num.CzName}"); }
                         break;
                     case 1:
                         Console.WriteLine($"Napis zkratku podle latinskeho nazvu {num.lName}");
                         var answ = Console.ReadLine();
-                        if (answ.ToLower() == num.Short) { score++; Console.WriteLine($"Correct! Current score is {score}."); }
+                        if (answ == num.Short) { score++; Console.WriteLine($"Correct! Current score is {score}."); }
                         else { score = 0; Console.WriteLine($"Bzzz! That's not correct! The correct answer is {num.Short}"); }
                         break;
                 }
