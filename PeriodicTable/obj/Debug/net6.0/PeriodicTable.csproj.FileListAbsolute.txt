@@ -1,0 +1,15 @@
+C:\Users\ollid\source\repos\PeriodicTable\PeriodicTable\bin\Debug\net6.0\PeriodicTable.exe
+C:\Users\ollid\source\repos\PeriodicTable\PeriodicTable\bin\Debug\net6.0\PeriodicTable.deps.json
+C:\Users\ollid\source\repos\PeriodicTable\PeriodicTable\bin\Debug\net6.0\PeriodicTable.runtimeconfig.json
+C:\Users\ollid\source\repos\PeriodicTable\PeriodicTable\bin\Debug\net6.0\PeriodicTable.dll
+C:\Users\ollid\source\repos\PeriodicTable\PeriodicTable\bin\Debug\net6.0\ref\PeriodicTable.dll
+C:\Users\ollid\source\repos\PeriodicTable\PeriodicTable\bin\Debug\net6.0\PeriodicTable.pdb
+C:\Users\ollid\source\repos\PeriodicTable\PeriodicTable\obj\Debug\net6.0\PeriodicTable.csproj.AssemblyReference.cache
+C:\Users\ollid\source\repos\PeriodicTable\PeriodicTable\obj\Debug\net6.0\PeriodicTable.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ollid\source\repos\PeriodicTable\PeriodicTable\obj\Debug\net6.0\PeriodicTable.AssemblyInfoInputs.cache
+C:\Users\ollid\source\repos\PeriodicTable\PeriodicTable\obj\Debug\net6.0\PeriodicTable.AssemblyInfo.cs
+C:\Users\ollid\source\repos\PeriodicTable\PeriodicTable\obj\Debug\net6.0\PeriodicTable.csproj.CoreCompileInputs.cache
+C:\Users\ollid\source\repos\PeriodicTable\PeriodicTable\obj\Debug\net6.0\PeriodicTable.dll
+C:\Users\ollid\source\repos\PeriodicTable\PeriodicTable\obj\Debug\net6.0\ref\PeriodicTable.dll
+C:\Users\ollid\source\repos\PeriodicTable\PeriodicTable\obj\Debug\net6.0\PeriodicTable.pdb
+C:\Users\ollid\source\repos\PeriodicTable\PeriodicTable\obj\Debug\net6.0\PeriodicTable.genruntimeconfig.cache
