@@ -22,7 +22,7 @@ namespace PeriodicTable
             foreach (string element in array)
             {
                 string[] temp = element.Split(','); //formating
-                ellist.Add(new Element { PN = Int32.Parse(temp[0]), Short = temp[1].ToLower(), EnName = temp[2].ToLower(), CzName = temp[3].ToLower(), lName = temp[4].ToLower() });
+                ellist.Add(new Element { PN = Int32.Parse(temp[0]), Short = temp[1], EnName = temp[2].ToLower(), CzName = temp[3].ToLower(), lName = temp[4].ToLower() });
                 //adds each new element into a list
             }
             return ellist;
