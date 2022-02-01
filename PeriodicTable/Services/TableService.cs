@@ -37,8 +37,8 @@ namespace PeriodicTable
                         while (proceed)
                         {
                             var input = Console.ReadLine();
-                            //Decides wether the input is a short or full name, calls appropriate function
-                            if (input.Length <= 2) { var output = FetchElementByShort(input.ToLower(), a); Console.WriteLine($"{output.PN}, Short: {output.Short}; EN: {output.EnName}, CZ: {output.CzName}, LAT: {output.lName}"); }
+                            //Decides if the input is a short or full name, calls function
+                            if (input.Length <= 2) { var output = FetchElementByShort(input, a); Console.WriteLine($"{output.PN}, Short: {output.Short}; EN: {output.EnName}, CZ: {output.CzName}, LAT: {output.lName}"); }
                             else { var output = FetchElementByName(input.ToLower(), a); Console.WriteLine($"{output.PN}; EN: {output.EnName}, CZ: {output.CzName}, LAT: {output.lName}"); }
                             Console.Write("Type s to continue searching or e to exit to main menu... ");
                             switch (Console.ReadLine())

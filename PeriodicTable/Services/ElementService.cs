@@ -18,10 +18,10 @@ namespace PeriodicTable
             var ellist = new List<Element>();
             var strm = new StreamReader(_path);
             var elements = strm.ReadToEnd();
-            string[] array = elements.Split("\r\n"); //formating
+            string[] array = elements.Split("\r\n");
             foreach (string element in array)
             {
-                string[] temp = element.Split(','); //formating
+                string[] temp = element.Split(',');
                 ellist.Add(new Element { PN = Int32.Parse(temp[0]), Short = temp[1], EnName = temp[2].ToLower(), CzName = temp[3].ToLower(), lName = temp[4].ToLower() });
                 //adds each new element into a list
             }
