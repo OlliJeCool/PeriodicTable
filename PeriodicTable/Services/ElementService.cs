@@ -4,30 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PeriodicTable
+namespace PeriodicTable;
+public class ElementService
 {
-    public class ElementService
-    {
-        #region Fields
-        private readonly string _path = "./elementlist.txt";
-        #endregion
+    #region Fields
+    private readonly string _path = "./elementlist.txt";
+    #endregion
 
-        #region Loading Elements
-        public List<Element> LoadElements() //loads elements from text file
+    #region Loading Elements
+    public List<Element> LoadElements() //loads elements from text file
+    {
+        var ellist = new List<Element>();
+        var strm = new StreamReader(_path);
+        var elements = strm.ReadToEnd();
+        string[] array = elements.Split("\r\n");
+        foreach (string element in array)
         {
-            var ellist = new List<Element>();
-            var strm = new StreamReader(_path);
-            var elements = strm.ReadToEnd();
-            string[] array = elements.Split("\r\n");
-            foreach (string element in array)
-            {
-                string[] temp = element.Split(',');
-                ellist.Add(new Element { PN = Int32.Parse(temp[0]), Short = temp[1], EnName = temp[2].ToLower(), CzName = temp[3].ToLower(), lName = temp[4].ToLower() });
-                //adds each new element into a list
-            }
-            return ellist;
-            //returns list of elements
+            string[] temp = element.Split(',');
+            ellist.Add(new Element { PN = Int32.Parse(temp[0]), Short = temp[1], EnName = temp[2].ToLower(), CzName = temp[3].ToLower(), lName = temp[4].ToLower() });
+            //adds each new element into a list
         }
-        #endregion
+        return ellist;
+        //returns list of elements
     }
+    #endregion
 }
