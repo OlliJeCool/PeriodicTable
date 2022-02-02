@@ -39,8 +39,8 @@ public class TableService
                         Console.Write("What do you want to search?  ");
                         var input = Console.ReadLine();
                         //Decides if the input is a short or full name, calls function
-                        if (input.Length <= 2) { var output = FetchElementByShort(input, a); Console.WriteLine($" ~ {output.PN}, Short: {output.Short}; EN: {output.EnName}, CZ: {output.CzName}, LAT: {output.lName}"); }
-                        else { var output = FetchElementByName(input.ToLower(), a); Console.WriteLine($" ~ {output.PN}, Short:{output.Short}; EN: {output.EnName}, CZ: {output.CzName}, LAT: {output.lName}"); }
+                        if (input.Length <= 2) { var output = FetchElementByShort(input, a); Console.WriteLine(output); }
+                        else { var output = FetchElementByName(input.ToLower(), a); Console.WriteLine(output); }
                         Console.Write("Type s to continue searching or e to exit to main menu... ");
                         switch (Console.ReadLine())
                         {
@@ -66,7 +66,7 @@ public class TableService
         foreach (var item in list)
         {
             //checks if there is an element with inputed short name and returns the element
-            if (item.Short == input) { return item; }
+            if (item.Short.ToLower() == input.ToLower()) { return item; }
             else { continue; }
         }
         //otherewise an error element is returned
